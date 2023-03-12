@@ -2,18 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="Script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Title</title>
 </head>
 <body>
 <div class="Container">
-    <div class="box">
-        <img id="img1" onclick="change1()" src="images/7b571b438ee94096d2e526872b97be72.jpg" width="20" height="20">
-        <img id="img2" onclick="change2()" src="images/0659cf24c4b672710bebc430d1ca8373.jpg" width="20" height="20">
-        <img id="img3" onclick="change3()" src="images/23613f8fb486b848e4a27be696d7aa2a.jpg" width="20" height="20">
-        <img id="img4" onclick="change4()" src="images/c2f07aa024341b2f9113ee34562ac9ce.jpg" width="20" height="20">
+    <div class="box" >
+        <img alt="" id="img1" onclick="change1()" src="7b571b438ee94096d2e526872b97be72.jpg" width="20" height="20">
+        <img alt="" id="img2" onclick="change2()" src="0659cf24c4b672710bebc430d1ca8373.jpg" width="20" height="20">
+        <img alt="" id="img3" onclick="change3()" src="23613f8fb486b848e4a27be696d7aa2a.jpg" width="20" height="20">
+        <img alt="" id="img4" onclick="change4()" src="c2f07aa024341b2f9113ee34562ac9ce.jpg" width="20" height="20">
     </div>
 </div>
 </body>
+<script>
+    let count1=0;
+    let count2=1;
+    let count3=2;
+    let count4=3;
+
+    let img1=document.getElementById('img1');
+    let img2=document.getElementById('img2');
+    let img3=document.getElementById('img3');
+    let img4=document.getElementById('img4');
+
+    function change1() {
+        count1++;
+        if (count1 == 1) {
+            img1.src = "7b571b438ee94096d2e526872b97be72.jpg";
+        } else if (count1 == 2) {
+            img1.src = "0659cf24c4b672710bebc430d1ca8373.jpg";
+        } else if (count1 == 3) {
+            img1.src = "23613f8fb486b848e4a27be696d7aa2a.jpg";
+        } else {
+            count1 = 0 ;
+            img1.src = "c2f07aa024341b2f9113ee34562ac9ce.jpg";
+        }
+        check()
+    }
+    function change2() {
+        count2++;
+        if (count2 == 1) {
+            img2.src = '7b571b438ee94096d2e526872b97be72.jpg';
+        } else if (count2 == 2) {
+            img2.src = '0659cf24c4b672710bebc430d1ca8373.jpg';
+        } else if (count2 == 3) {
+            img2.src = '23613f8fb486b848e4a27be696d7aa2a.jpg';
+        } else {
+            count2 = 0 ;
+            img2.src = 'c2f07aa024341b2f9113ee34562ac9ce.jpg';
+        }
+        check()
+    }
+    function change3() {
+        count3++;
+        if (count3 == 1) {
+            img3.src = '7b571b438ee94096d2e526872b97be72.jpg';
+        } else if (count3 == 2) {
+            img3.src = '0659cf24c4b672710bebc430d1ca8373.jpg';
+        } else if (count3 == 3) {
+            img3.src = '23613f8fb486b848e4a27be696d7aa2a.jpg';
+        } else {
+            count3 = 0 ;
+            img3.src = 'c2f07aa024341b2f9113ee34562ac9ce.jpg';
+        }
+        check()
+    }
+    function change4() {
+        count4++;
+        if (count4 == 1) {
+            img4.src = '7b571b438ee94096d2e526872b97be72.jpg';
+        } else if (count4 == 2) {
+            img4.src = '0659cf24c4b672710bebc430d1ca8373.jpg';
+        } else if (count4 == 3) {
+            img4.src = '23613f8fb486b848e4a27be696d7aa2a.jpg';
+        } else {
+            count4 = 0 ;
+            img4.src = 'c2f07aa024341b2f9113ee34562ac9ce.jpg';
+        }
+        check()
+    }
+
+    function check() {
+        console.log('cád',count1)
+        if (count1 == count2 && count2 == count3 && count3== count4) {
+            alert('Bạn quá giỏi')
+        }
+    }
+</script>
 </html>
